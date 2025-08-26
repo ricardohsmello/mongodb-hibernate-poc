@@ -36,16 +36,23 @@ You should see stateStr: "PRIMARY" for the member.
 ## Install the mongo-hibernate library locally
 This project depends on the [mongo-hibernate](https://github.com/mongodb/mongo-hibernate)
 library, which is not yet published on Maven Central.
-You’ll need to build and install it into your local Maven repository:
+Because of that, we need to build it manually and publish it to our local Maven repository `(~/.m2/repository)`.
 
-```
-git clone https://github.com/mongodb/mongo-hibernate.git
-cd mongo-hibernate
-
-./gradlew publishToMavenLocal
-
-```
-
+Follow these steps:
+1. Clone the repository **mongo-hibernate**:
+   ```
+   git clone https://github.com/mongodb/mongo-hibernate.git
+   ```
+2. Navigate into the folder:
+   ```
+   cd mongo-hibernate
+   ```
+3. Publish to your local Maven repository:
+   ```
+   ./gradlew publishToMavenLocal
+    ```
+    This will compile the project and place the generated artifacts under ~/.m2/repository, making them available as dependencies in other Maven projects (like this POC).
+ 
 ## - Running the POC
 1. Clone this project:
    ```
