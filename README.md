@@ -64,7 +64,7 @@ Follow these steps:
    ```
 3. Run the application:
    ```
-   mvn compile exec:java -Dexec.mainClass="com.mongodb.Main"
+   mvn compile exec:java
    ```
 4. You’ll see the interactive menu in the terminal:
     ````
