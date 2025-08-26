@@ -33,7 +33,20 @@ The Hibernate MongoDB dialect requires a replica set.
    ```
 You should see stateStr: "PRIMARY" for the member.
 
-## Install the mongo-hibernate library locally
+## Project Setup
+
+After starting MongoDB as a replica set, you need two repositories:
+
+- mongo-hibernate (the dialect library)  
+- mongodb-hibernate-poc (this sample project)
+
+It’s easier if you create a working folder first, then clone both repos inside it.
+```
+mkdir hibernate-mongo-workspace
+cd hibernate-mongo-workspace
+```
+
+### 1 - Install the mongo-hibernate library locally
 This project depends on the [mongo-hibernate](https://github.com/mongodb/mongo-hibernate)
 library, which is not yet published on Maven Central.
 Because of that, we need to build it manually and publish it to our local Maven repository `(~/.m2/repository)`.
@@ -51,9 +64,13 @@ Follow these steps:
    ```
    ./gradlew publishToMavenLocal
     ```
-    This will compile the project and place the generated artifacts under ~/.m2/repository, making them available as dependencies in other Maven projects (like this POC).
- 
-## - Running the POC
+    You should see a Successful message.
+4. Return to hibernate-mongo-workspace folder:
+   ```
+   cd ..
+   ```
+
+### 2 - Running the POC
 1. Clone this project:
    ```
    git clone https://github.com/ricardohsmello/mongodb-hibernate-poc.git
