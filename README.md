@@ -14,7 +14,7 @@ The Hibernate MongoDB dialect requires a replica set.
 1. Start a MongoDB container:
     ```
     docker run --rm -p 27017:27017 --name mongo-rs mongo:8.0 \
-    --replSet rs0 --bind_ip_all
+    --replSet rs0 --bind_ip_all --setParameter enableTestCommands=1
     ```
 2. Open a new terminal and connect to the node:
    ```
