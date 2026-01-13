@@ -3,7 +3,6 @@
 This project demonstrates how to integrate MongoDB with Hibernate using the MongoDB Hibernate dialect.
 
 ## Prerequisites
-
 - Java 17+ (tested with Corretto 17 and 21)
 - Maven 3.9+
 - Docker (to run a MongoDB replica set)
